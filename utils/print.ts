@@ -18,7 +18,17 @@ export const printLabel = (html: string) => {
   // Inject the label HTML
   printContainer.innerHTML = `
     <style>
+      @page {
+        size: 10cm 10cm;
+        margin: 0;
+      }
       @media print {
+        html, body {
+          width: 10cm !important;
+          height: 10cm !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
         body * {
           visibility: hidden;
         }
@@ -27,21 +37,23 @@ export const printLabel = (html: string) => {
           visibility: visible;
         }
         #print-container {
-          position: absolute !important;
+          position: fixed !important;
           left: 0 !important;
           top: 0 !important;
-          width: 100% !important;
-          height: 100% !important;
+          width: 10cm !important;
+          height: 10cm !important;
           z-index: 9999 !important;
-          overflow: visible !important;
+          overflow: hidden !important;
           background: white !important;
           display: flex !important;
           justify-content: center !important;
           align-items: center !important;
+          page-break-after: avoid !important;
+          page-break-before: avoid !important;
         }
         .print-label {
-          width: 10cm !important;
-          height: 10cm !important;
+          width: 100% !important;
+          height: 100% !important;
           padding: 25px !important;
           box-sizing: border-box !important;
           border: 1px solid #d1d5db !important;

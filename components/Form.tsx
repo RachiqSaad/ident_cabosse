@@ -26,19 +26,19 @@ export default function Form() {
                 ÉTIQUETTE CONTRÔLE
             </div>
             <div style="width: 100%;">
-                <p style="font-size: 48px; font-weight: bold; color: #1f2937; margin: 15px 0; text-align: center;">
+                <p style="font-size: 40px; font-weight: bold; color: #1f2937; margin: 15px 0; text-align: center;">
                     TC: ${data.numeroTC || 'N/A'}
                 </p>
-                <p style="font-size: 28px; color: #374151; margin: 12px 0; text-align: center; line-height: 1.6;">
+                <p style="font-size: 28px; color: #374151; margin: 12px 0; text-align: center; line-height: 1.4;">
                     Réf: ${data.reference || 'N/A'}
                 </p>
-                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.6;">
+                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.4;">
                     Date: ${data.date}
                 </p>
-                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.6;">
+                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.4;">
                     Agent: ${data.agent}
                 </p>
-                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.6;">
+                <p style="font-size: 24px; color: #374151; margin: 10px 0; text-align: center; line-height: 1.4;">
                     Qualité: ${data.qualite}
                 </p>
             </div>
@@ -107,6 +107,7 @@ export default function Form() {
                         <option value="D">D - Défaut</option>
                     </select>
                 </div>
+
             </div>
 
             <div className="flex gap-4 mt-8">
